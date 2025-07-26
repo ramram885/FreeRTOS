@@ -10,6 +10,7 @@ OBJ = boot.o \
 	  $(FREERTOS_PATH)/tasks.o \
 	  $(FREERTOS_PATH)/portable/MemMang/heap_4.o \
 	  $(FREERTOS_PATH)/portable/GCC/ARM_CM3/port.o \
+	  $(FREERTOS_PATH)/list.o \
 
 INC = -I$(FREERTOS_PATH)/include/ \
 	  -I$(FREERTOS_PATH)/portable/GCC/ARM_CM3/ \
