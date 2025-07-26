@@ -2,7 +2,19 @@ PROJ = main
 CPU ?= cortex-m3
 BOARD ?= stm32vldiscovery
 
-OBJ = boot.o start.o
+FREERTOS_PATH = ../FreeRTOS-Kernel
+
+OBJ = boot.o \
+	  start.o \
+	  portFunctions.o \
+	  $(FREERTOS_PATH)/tasks.o \
+	  $(FREERTOS_PATH)/portable/MemMang/heap_4.o \
+	  $(FREERTOS_PATH)/portable/GCC/ARM_CM3/port.o \
+	  $(FREERTOS_PATH)/list.o \
+
+INC = -I$(FREERTOS_PATH)/include/ \
+	  -I$(FREERTOS_PATH)/portable/GCC/ARM_CM3/ \
+	  -I./
 
 .PHONY: all
 all: $(PROJ).elf
@@ -11,7 +23,7 @@ all: $(PROJ).elf
 	arm-none-eabi-as -mthumb -mcpu=$(CPU) -g -c $^ -o $@
 
 %.o: %.c	# Convert Source file (.C) into Object file (.o)
-	arm-none-eabi-gcc -mthumb -mcpu=$(CPU) -g -c $^ -o $@
+	arm-none-eabi-gcc $(INC) -mthumb -mcpu=$(CPU) -g -c $^ -o $@
 
 $(PROJ).elf: $(OBJ)
 	arm-none-eabi-ld -Tmap.ld $^ -o $@
