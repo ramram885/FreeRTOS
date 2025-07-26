@@ -7,6 +7,7 @@ FREERTOS_PATH = ../FreeRTOS-Kernel
 OBJ = boot.o start.o
 
 INC = -I$(FREERTOS_PATH)/include/ \
+	  -I$(FREERTOS_PATH)/portable/GCC/ARM_CM3/ \
 	  -I./
 
 .PHONY: all
