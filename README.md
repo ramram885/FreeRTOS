@@ -8,6 +8,7 @@ Companion Repo for the FreeRTOS Course
 - [STM32VLDISCOVERY Board](https://www.st.com/resource/en/user_manual/um0919-stm32vldiscovery-stm32-value-line-discovery-stmicroelectronics.pdf)
   - [Datasheet](https://www.st.com/resource/en/reference_manual/dm00031020-stm32f405-415-stm32f407-417-stm32f427-437-and-stm32f429-439-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf)
 - [Vector table](https://download.mikroe.com/documents/compilers/mikroc/arm/help/interrupts.htm)
+- [svc-call preemption priority](https://forums.freertos.org/t/svc-call-causing-hardfault-when-there-is-no-pre-emption-priority/20827)
 
 # License
 
