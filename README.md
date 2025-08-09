@@ -7,6 +7,8 @@ Companion Repo for the FreeRTOS Course
 - [ARM M for Beginners](https://community.arm.com/cfs-file/__key/telligent-evolution-components-attachments/01-2142-00-00-00-00-52-96/White-Paper-_2D00_-Cortex_2D00_M-for-Beginners-_2D00_-2016-_2800_final-v3_2900_.pdf)
 - [STM32VLDISCOVERY Board](https://www.st.com/resource/en/user_manual/um0919-stm32vldiscovery-stm32-value-line-discovery-stmicroelectronics.pdf)
   - [Datasheet](https://www.st.com/resource/en/reference_manual/dm00031020-stm32f405-415-stm32f407-417-stm32f427-437-and-stm32f429-439-advanced-arm-based-32-bit-mcus-stmicroelectronics.pdf)
+- [Vector table](https://download.mikroe.com/documents/compilers/mikroc/arm/help/interrupts.htm)
+- [svc-call preemption priority](https://forums.freertos.org/t/svc-call-causing-hardfault-when-there-is-no-pre-emption-priority/20827)
 
 # License
 
