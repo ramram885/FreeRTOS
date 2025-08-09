@@ -11,9 +11,10 @@ vector_table:
     .word default
     .word default
     .word default
+    .word vPortSVCHandler 
     .word default
     .word default
-    .word default
+    .word xPortPendSVHandler
     .word xPortSysTickHandler // From /FreeRTOS-Kernel/portable/GCC/ARM_CM3
     .zero 400
 
@@ -22,6 +23,7 @@ vector_table:
     .type reset_handler %function
 reset_handler:
     b start
+    b .
 
     .section .text
     .align 1
